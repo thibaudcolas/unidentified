@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "babel-node server.js",
-    "lint": "eslint . && jscs .",
+    "lint": "eslint .",
     "test": "npm run lint"
   }
 }
