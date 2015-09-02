@@ -4,10 +4,25 @@ import browserSync from 'browser-sync';
 import sass from 'gulp-sass';
 import pleeease from 'gulp-pleeease';
 import sourcemaps from 'gulp-sourcemaps';
+import gutil from 'gulp-util';
+import browserify from 'browserify';
+import browserifyInc from 'browserify-incremental';
+import babelify from 'babelify';
+import uglify from 'gulp-uglify';
+import buffer from 'vinyl-buffer';
+import source from 'vinyl-source-stream';
 
 const isProduction = process.env.NODE_ENV === 'production';
-
 const bs = browserSync.create('main');
+const browserifyInstance = isProduction ? browserify : browserifyInc;
+
+const bundler = browserifyInstance({
+    cache: {},
+    transform: [babelify],
+    packageCache: {},
+    debug: !isProduction,
+    fullPaths: !isProduction,
+});
 
 const pleeeaseOptions = {
     minifier: isProduction,
@@ -26,13 +41,29 @@ gulp.task('css', () => {
     return gulp.src(path.join('src', 'styles', 'main.scss'))
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(pleeease(pleeeaseOptions))
-        .pipe(sourcemaps.write())
-        .on('error', (err) => {
-            console.log(err.message);
+        .on('error', function onError(err) {
+            gutil.log(err.message);
             bs.notify(err.message, 10000);
             this.emit('end');
         })
+        .pipe(pleeease(pleeeaseOptions))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.join('public')))
+        .pipe(bs.stream());
+});
+
+bundler.add(path.resolve('src', 'js', 'main.js'));
+
+gulp.task('js', () => {
+    return bundler.bundle()
+        .on('error', function onError(err) {
+            gutil.log(err.message);
+            bs.notify(err.message, 10000);
+            this.emit('end');
+        })
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(isProduction ? uglify() : gutil.noop())
         .pipe(gulp.dest(path.join('public')))
         .pipe(bs.stream());
 });

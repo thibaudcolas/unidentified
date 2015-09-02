@@ -18,13 +18,20 @@
   ],
   "devDependencies": {
     "babel-eslint": "^4.1.1",
+    "babelify": "^6.3.0",
     "browser-sync": "^2.9.3",
+    "browserify": "^11.1.0",
+    "browserify-incremental": "^3.0.1",
     "eslint": "^1.4.1",
     "eslint-config-airbnb": "0.0.8",
     "gulp": "^3.9.0",
     "gulp-pleeease": "^1.2.0",
     "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.5.2"
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "babel": "^5.8.23",
@@ -36,6 +43,7 @@
     "start": "babel-node server.js",
     "lint": "eslint .",
     "test": "npm run lint",
-    "css": "gulp css"
+    "css": "gulp css",
+    "js": "gulp js"
   }
 }

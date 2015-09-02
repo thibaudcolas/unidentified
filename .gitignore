@@ -5,6 +5,7 @@
 # dist
 static
 public/main.css
+public/main.js
 
 # -------------------------------------------------
 # OS generated files
