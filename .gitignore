@@ -4,6 +4,7 @@
 # build
 # dist
 static
+public/main.css
 
 # -------------------------------------------------
 # OS generated files
