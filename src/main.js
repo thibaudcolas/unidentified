@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from 'react-router';
-import createHashHistory from 'history/lib/createHashHistory';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 import routes from './routes';
 
 const routerConfig = {
     routes: routes,
-    history: createHashHistory(),
+    history: createBrowserHistory(),
 };
 
 const router = React.createElement(Router, routerConfig);
