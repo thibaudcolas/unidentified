@@ -52,7 +52,7 @@ gulp.task('css', () => {
         .pipe(bs.stream());
 });
 
-bundler.add(path.resolve('src', 'js', 'main.js'));
+bundler.add(path.resolve('src', 'main.js'));
 
 gulp.task('js', () => {
     return bundler.bundle()
@@ -81,7 +81,7 @@ gulp.task('watch', ['js', 'css'], () => {
 
     gulp.watch(justReload, bs.reload);
     gulp.watch(path.join('src', 'styles', '**', '*.scss'), ['css']);
-    gulp.watch(path.join('src', 'js', '**', '*.js'), ['js']);
+    gulp.watch(path.join('src', '**', '*.js'), ['js']);
 });
 
 gulp.task('build', ['js', 'css']);
