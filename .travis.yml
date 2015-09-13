@@ -2,9 +2,17 @@ language: node_js
 node_js:
     - 0.12
 
+install:
+    - npm install
+    - npm install -g codeclimate-test-reporter
+
 script:
     - npm run dist
-    - npm run test
+    - npm run lint
+    - npm run coverage
+
+after_script:
+    - CODECLIMATE_REPO_TOKEN=9b937ba5fcd13b83538042a72692dc830ca3c0d82e6b1aabb5442b9e5d051b82 codeclimate-test-reporter < coverage/lcov.info
 
 # http://docs.travis-ci.com/user/deployment/heroku/
 deploy:
