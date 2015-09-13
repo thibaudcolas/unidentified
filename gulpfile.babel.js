@@ -39,7 +39,7 @@ const pleeeaseOptions = {
 
 gulp.task('css', () => {
     return gulp.src(path.join('src', 'styles', 'main.scss'))
-        .pipe(sourcemaps.init())
+        .pipe(isProduction ? gutil.noop() : sourcemaps.init())
         .pipe(sass())
         .on('error', function onError(err) {
             gutil.log(err.message);
@@ -47,7 +47,7 @@ gulp.task('css', () => {
             this.emit('end');
         })
         .pipe(pleeease(pleeeaseOptions))
-        .pipe(sourcemaps.write())
+        .pipe(isProduction ? gutil.noop() : sourcemaps.write())
         .pipe(gulp.dest(path.join('public')))
         .pipe(bs.stream());
 });
