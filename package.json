@@ -57,6 +57,6 @@
     "js": "gulp js",
     "build": "gulp build",
     "dist": "NODE_ENV=production gulp build",
-    "deploy": "git push heroku master:deploy/production"
+    "deploy": "git push -f origin master:deploy/production"
   }
 }
