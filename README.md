@@ -54,9 +54,12 @@ npm run deploy
 ### First time
 
 ```sh
+# Create the Heroku app
 heroku create unidentified
 heroku ps:scale web=1
-# To try out the Procfile,
+# Try out the Procfile
 gem install foreman
 foreman start
+# Configure deploy from Travis
+travis setup heroku
 ```
