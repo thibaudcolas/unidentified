@@ -7,7 +7,7 @@ import createLocation from 'history/lib/createLocation';
 import { RoutingContext, match } from 'react-router';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import routes from './src/routes';
+import routes from './routes';
 
 const app = express();
 
@@ -19,7 +19,7 @@ const port = app.get('port');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 nunjucks.configure('public', {
     autoescape: true,

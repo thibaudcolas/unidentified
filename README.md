@@ -43,4 +43,15 @@ npm run test
 
 ## Deployment
 
-TODO
+```sh
+npm run deploy
+```
+
+### First time
+
+```sh
+heroku create unidentified
+# To try out the Procfile,
+gem install foreman
+foreman start
+```

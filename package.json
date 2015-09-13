@@ -2,7 +2,7 @@
   "name": "unidentified",
   "version": "0.1.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "author": "Thibaud Colas",
   "license": "ISC",
   "homepage": "https://github.com/ThibWeb/unidentified",
@@ -48,12 +48,15 @@
   },
   "scripts": {
     "start": "npm run server:dev & npm run watch",
-    "server": "babel-node server.js",
-    "server:dev": "nodemon --exec babel-node -- server.js",
+    "server": "node index.js",
+    "server:dev": "nodemon index.js",
     "watch": "gulp watch",
     "lint": "eslint .",
     "test": "npm run lint",
     "css": "gulp css",
-    "js": "gulp js"
+    "js": "gulp js",
+    "build": "gulp build",
+    "dist": "NODE_ENV=production; gulp build",
+    "deploy": "git push heroku master"
   }
 }
