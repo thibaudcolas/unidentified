@@ -1,7 +1,7 @@
 [unidentified](https://unidentified.herokuapp.com/)
 ==========
 
-[![Build Status](https://img.shields.io/travis/ThibWeb/unidentified.svg?style=flat-square)](https://travis-ci.org/ThibWeb/unidentified) [![devDependency Status](https://img.shields.io/david/dev/ThibWeb/unidentified.svg?style=flat-square)](https://david-dm.org/ThibWeb/unidentified) [![Code Climate](https://img.shields.io/codeclimate/github/ThibWeb/unidentified.svg?style=flat-square)](https://codeclimate.com/github/ThibWeb/unidentified) [![Coverage](https://img.shields.io/codeclimate/coverage/github/ThibWeb/unidentified.svg?style=flat-square)](https://codeclimate.com/github/ThibWeb/unidentified/coverage)
+[![Build Status](https://img.shields.io/travis/ThibWeb/unidentified.svg?style=flat-square)](https://travis-ci.org/ThibWeb/unidentified) [![dependency Status](https://img.shields.io/david/ThibWeb/unidentified.svg?style=flat-square)](https://david-dm.org/ThibWeb/unidentified) [![devDependency Status](https://img.shields.io/david/dev/ThibWeb/unidentified.svg?style=flat-square)](https://david-dm.org/ThibWeb/unidentified) [![Code Climate](https://img.shields.io/codeclimate/github/ThibWeb/unidentified.svg?style=flat-square)](https://codeclimate.com/github/ThibWeb/unidentified) [![Coverage](https://img.shields.io/codeclimate/coverage/github/ThibWeb/unidentified.svg?style=flat-square)](https://codeclimate.com/github/ThibWeb/unidentified/coverage)
 
 > TODO
 
