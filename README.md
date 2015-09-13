@@ -1,7 +1,11 @@
-unidentified [![Travis](https://img.shields.io/travis/ThibWeb/unidentified.svg?style=flat-square)](https://travis-ci.org/ThibWeb/unidentified)
+[unidentified](https://unidentified.herokuapp.com/)
 ==========
 
+[![Build Status](https://img.shields.io/travis/ThibWeb/unidentified.svg?style=flat-square)](https://travis-ci.org/ThibWeb/unidentified) [![devDependency Status](https://img.shields.io/david/dev/ThibWeb/unidentified.svg?style=flat-square)](https://david-dm.org/ThibWeb/unidentified) [![Code Climate](https://img.shields.io/codeclimate/github/ThibWeb/unidentified.svg?style=flat-square)](https://codeclimate.com/github/ThibWeb/unidentified) [![Coverage](https://img.shields.io/codeclimate/coverage/github/ThibWeb/unidentified.svg?style=flat-square)](https://codeclimate.com/github/ThibWeb/unidentified/coverage)
+
 > TODO
+
+- [Live at unidentified.herokuapp.com](https://unidentified.herokuapp.com/)
 
 ## Installation
 
@@ -21,7 +25,7 @@ To install our dependencies, run:
 
 ```sh
 # Install the linters.
-npm install --global eslint babel-eslint eslint-config-airbnb
+npm install --global eslint babel-eslint eslint-config-airbnb eslint-plugin-react
 # Then, install all project dependencies.
 npm install
 # If that's your thing, install the git hooks:
@@ -51,6 +55,7 @@ npm run deploy
 
 ```sh
 heroku create unidentified
+heroku ps:scale web=1
 # To try out the Procfile,
 gem install foreman
 foreman start
