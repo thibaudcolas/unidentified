@@ -30,9 +30,9 @@ nunjucks.configure('public', {
 app.use((req, res) => {
     const location = createLocation(req.url);
 
-    match({ routes, location }, (error, redirectLocation, renderProps) => {
-        if (redirectLocation) {
-            res.redirect(301, redirectLocation.pathname + redirectLocation.search);
+    match({ routes, location }, (error, redirectLoc, renderProps) => {
+        if (redirectLoc) {
+            res.redirect(301, redirectLoc.pathname + redirectLoc.search);
         } else if (error) {
             res.status(500).send(error.message);
         } else if (renderProps === null) {
