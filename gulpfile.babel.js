@@ -72,7 +72,7 @@ gulp.task('watch', ['js', 'css'], () => {
     bs.init({
         notify: false,
         open: true,
-        proxy: 'localhost:3000',
+        proxy: 'localhost:5000',
     });
 
     const justReload = [
