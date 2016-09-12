@@ -23,4 +23,4 @@ deploy:
     app: unidentified
     on:
         branch: deploy/production
-        repo: ThibWeb/unidentified
+        repo: thibaudcolas/unidentified

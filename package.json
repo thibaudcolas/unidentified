@@ -5,13 +5,13 @@
   "main": "index.js",
   "author": "Thibaud Colas",
   "license": "ISC",
-  "homepage": "https://github.com/ThibWeb/unidentified",
+  "homepage": "https://github.com/thibaudcolas/unidentified",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ThibWeb/unidentified.git"
+    "url": "git@github.com:thibaudcolas/unidentified.git"
   },
   "bugs": {
-    "url": "https://github.com/ThibWeb/unidentified/issues"
+    "url": "https://github.com/thibaudcolas/unidentified/issues"
   },
   "keywords": [
     "unidentified"
