@@ -1,11 +1,4 @@
-[unidentified](https://unidentified.herokuapp.com/)
-==========
-
-[![Build Status](https://img.shields.io/travis/thibaudcolas/unidentified.svg?style=flat-square)](https://travis-ci.org/thibaudcolas/unidentified) [![dependency Status](https://img.shields.io/david/thibaudcolas/unidentified.svg?style=flat-square)](https://david-dm.org/thibaudcolas/unidentified) [![devDependency Status](https://img.shields.io/david/dev/thibaudcolas/unidentified.svg?style=flat-square)](https://david-dm.org/thibaudcolas/unidentified) [![Code Climate](https://img.shields.io/codeclimate/github/thibaudcolas/unidentified.svg?style=flat-square)](https://codeclimate.com/github/thibaudcolas/unidentified) [![Coverage](https://img.shields.io/codeclimate/coverage/github/thibaudcolas/unidentified.svg?style=flat-square)](https://codeclimate.com/github/thibaudcolas/unidentified/coverage)
-
-> TODO
-
-- [Live at unidentified.herokuapp.com](https://unidentified.herokuapp.com/)
+# unidentified
 
 ## Installation
 
